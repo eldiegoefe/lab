@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="./microscopio-de-fluorescencia-puesta-en-marcha-y-ajustes.html" />
+
+    <title>  Laboratorio de Bioingeniería - CIC &mdash; Microscopio de Fluorescencia. Puesta en marcha y ajustes.
+</title>
+
+
+
+
+    <link rel="stylesheet" href="./theme/css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <meta name="author" content="Diego Fainstein">
+    <meta name="description" content="Basado en un microscopio Nikon Diaphot 200 se encuentra montado un sistema para medir fluorescencia con un sistema de filtros y espejos, y como detectores dos tubos fotomultiplicadores. Conexiones Algunas conexiones se encontraban visiblemente en mal estado (PONER FOTO). Parece necesario reemplazar fichas BNC y mejorar algunas secciones de cables ...">
+  <meta name="tags" contents="microscopios, electronica, , ">
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <h1 class="header-name">
+        <a class="nodec" href=".">Laboratorio de Bioingeniería - CIC</a>
+      </h1>
+      <h3 class="header-text"></h3>
+      <ul class="header-menu list-inline">
+      </ul>
+    </div>
+  </div>
+</header> <!-- /.header -->  <div class="container">
+  <div class="post full-post">
+    <h1 class="post-title">
+      <a href="/microscopio-de-fluorescencia-puesta-en-marcha-y-ajustes.html" title="Permalink to Microscopio de Fluorescencia. Puesta en marcha y ajustes.">Microscopio de Fluorescencia. Puesta en marcha y ajustes.</a>
+    </h1>
+    <ul class="list-inline">
+      <li class="post-date">
+        <a class="text-muted" href="/microscopio-de-fluorescencia-puesta-en-marcha-y-ajustes.html" title="2015-05-13T10:00:00-03:00">mié 13 mayo 2015</a>
+      </li>
+      <li class="muted">&middot;</li>
+      <li class="post-category">
+        <a href="./category/hardware.html">hardware</a>
+      </li>
+    </ul>
+    <div class="post-content">
+      <p>Basado en un microscopio <a class="reference external" href="./pdfs/diaphot-2-im.pdf">Nikon Diaphot 200</a> se encuentra montado un
+sistema para medir fluorescencia con un sistema de filtros y espejos,
+y como detectores dos tubos fotomultiplicadores.</p>
+<div class="section" id="conexiones">
+<h2>Conexiones</h2>
+<p>Algunas conexiones se encontraban visiblemente en mal estado (<strong>PONER
+FOTO</strong>). Parece necesario reemplazar fichas BNC y mejorar algunas
+secciones de cables.</p>
+</div>
+<div class="section" id="lampara-de-posicionamiento">
+<h2>Lámpara de posicionamiento</h2>
+<p>La iluminación está alimentada con una fuente Nikon (12V/100W)
+conectada al transformador de 220V/110V. Según el manual los repuestos
+admisibles son:</p>
+<ul class="simple">
+<li><a class="reference external" href="./pdfs/lamp-bipin-osram-hlx64623.pdf">OSRAM HLX64623</a></li>
+<li>PHILIPS 7724</li>
+</ul>
+<p>En Mercado Libre venden la <a class="reference external" href="./pdfs/lamp-bipin-osram-hlx64625.pdf">OSRAM HLX64625</a> a $90. Si bien ésta última
+emite más intensidad (3600 lm vs 2800 lm) tiene mucho menor vida útil
+(50 hs vs 2000 hs).</p>
+<p>Sin embargo no hubo necesidad de cambiar la lámpara porque luego de
+desarmar la fuente y volverla a armar prendió sin problemas. El
+fusible interno estaba bien, no se veía nada quemado. Quizás la tecla
+de encendido haya fallado por la falta de uso (pude limpiarla por
+fuera y chequear con el tester que andaba bien).</p>
+<blockquote>
+</blockquote>
+</div>
+<div class="section" id="relevamiento-del-sistema-de-adquisicion">
+<h2>Relevamiento del sistema de adquisición</h2>
+<p>Los tubos fotomultiplicadores (PMT) atraviesan un circuito de
+construcción casera, sin documentación sobre su esquema de
+funcionamiento. El relevamiento indica que los bloques que lo componen
+son: conversor VI (amplificador de transimpedancia), ajuste de offset
+(amplificador sumador), control de ganancia (amplificador inversor),
+y filtro pasabajos. La plaqueta cuenta con dos canales e incluso hay
+una porción con componentes soldados que no cumplen ninguna función
+(están desconectados del resto del circuito).</p>
+</div>
+<div class="section" id="camino-optico">
+<h2>Camino óptico</h2>
+<p>Embutidos en un gabinete metálico se encuentran los PMT con filtros de
+distinta longitud de onda en cada uno de los dos caminos ópticos. Los
+PMT pueden extraerse con facilidad desajustando pocos tornillos. No
+está marcado cuál filtro se encuentra en cada uno de los dos
+receptáculos (ni cual es el ancho de banda), así que debieron hacerse
+pruebas para determinar cuál PMT conectar al canal 1 y al canal 2.</p>
+</div>
+<div class="section" id="conversor-i-v-y-acondicionador-de-senal">
+<h2>Conversor I-V y acondicionador de señal</h2>
+<p>El dispositivo que sigue al PMT puede verse en la figura siguiente
+(con la inscripción &quot;Conversor I/V Ca&quot;):</p>
+<img alt="conversor v-i" class="align-center" src="https://farm8.staticflickr.com/7702/17567473871_23a03ab290_b.jpg" style="width: 100.0%;" />
+<p>Dentro del gabinete hay una plaqueta de construcción casera, con
+sectores vacíos y también con elementos que están soldados pero no son
+realmente utilizados (un operacional, resistencias que cambiarían la
+frecuencia de corte de los filtros, etc). Hay conexiones que apenas se
+sostienen en un hilo y pistas reparadas con alambres, da la sensación
+de ser un prototipo que nunca llegó a convertirse en producto final.</p>
+<img alt="plaqueta del conversor v-i" class="align-center" src="https://farm9.staticflickr.com/8861/17567754575_c6224b1717_b.jpg" style="width: 100.0%;" />
+<p>Al relevar el circuito quedó el siguiente diagrama (se puede ver mejor
+en el <a class="reference external" href="./pdfs/conversor-corriente-voltaje-original.pdf">pdf</a>):</p>
+<img alt="circuito de la plaqueta anterior" class="align-center" src="https://farm6.staticflickr.com/5347/17380806690_1e42f94856_b.jpg" style="width: 100.0%;" />
+<p>En la imagen siguiente están marcadas las referencias para permitir
+identificar a los componentes de los distintos bloques del circuito
+(ampliar el <a class="reference external" href="./pdfs/conversor-corriente-voltaje-original.pdf">pdf</a> para verlo mejor):</p>
+<img alt="conversor con referencias" class="align-center" src="https://farm8.staticflickr.com/7681/17568608281_168ab26b5e_b.jpg" style="width: 100.0%;" />
+<p>Los dos filtros cortan cerca alrededor de los 10 Hz, comprobado de
+acuerdo a los valores de los componentes relevados usando el simulador
+de la página <a class="reference external" href="http://sim.okawa-denshi.jp/en/OPseikiLowkeisan.htm">Sallen-Key Low-pass Filter Design Tool</a>, y también
+midiendo frente a una senoidal de entrada que en la banda de paso
+provoca una salida de 10V:</p>
+<table border="1" class="docutils">
+<caption>Respuesta en frecuencia</caption>
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Frecuencia [Hz]</th>
+<th class="head">Salida [V]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>10</td>
+</tr>
+<tr><td>4</td>
+<td>10</td>
+</tr>
+<tr><td>5</td>
+<td>9.92</td>
+</tr>
+<tr><td>7</td>
+<td>9.60</td>
+</tr>
+<tr><td>9</td>
+<td>7.76</td>
+</tr>
+<tr><td>10</td>
+<td>6.40</td>
+</tr>
+<tr><td>11</td>
+<td>4.88</td>
+</tr>
+<tr><td>12</td>
+<td>3.68</td>
+</tr>
+<tr><td>13</td>
+<td>2.80</td>
+</tr>
+<tr><td>14</td>
+<td>2.16</td>
+</tr>
+<tr><td>15</td>
+<td>1.68</td>
+</tr>
+<tr><td>20</td>
+<td>0.52</td>
+</tr>
+<tr><td>30</td>
+<td>0.11</td>
+</tr>
+<tr><td>50</td>
+<td>0.02</td>
+</tr>
+</tbody>
+</table>
+<p>Como puede apreciarse en la tabla, la frecuencia de corte
+correspondiente a la atenuación del 70,7% (los 3 dB en un filtro de
+1er orden) se encuentra en algún lugar entre los 9 y los 10 Hz.</p>
+<p>Se diseñó otra plaqueta para reemplazar la existente, reemplazando el
+control de offset para construirlo con un amplificador de
+instrumentación (en vez del sumador inversor respecto del cual tiene
+mejor RRMC), se ubicó un filtro pasabajos en la salida para usarlo
+como anti-aliasing y se eliminó el inversor de ganancia unitaria en la
+salida. También se agregaron jumpers para permitir la prueba de los
+bloques por separado en caso de falla. Para permitir la construcción
+en una plaqueta de una sola cara se agregaron un par de resistencias El
+circuito quedó como en la figura siguiente (también se puede ver mejor
+en <a class="reference external" href="./pdfs/canal-acondicionamiento-para-pmt-nuevo.pdf">este pdf</a>):</p>
+<img alt="canal de acondicionamiento nuevo" class="align-center" src="https://farm6.staticflickr.com/5333/17414354658_a65f621c72_b.jpg" style="width: 100.0%;" />
+<p>Se ilustra a continuación el diseño de la plaqueta (de una sola cara)
+junto con una vista simulada de la misma (aunque no se ven los
+potenciómetros ni los reguladores):</p>
+<img alt="plaqueta" class="align-center" src="https://farm6.staticflickr.com/5325/17576797956_2bb0dcf75b_b.jpg" style="width: 100.0%;" />
+</div>
+
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="col-md-8 col-md-offset-2">
+  </div>
+  </div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-center">
+      Diego Fainstein, <a href="" target="_blank"></a> unless otherwise noted.
+    </p>
+    <div class="text-center">
+      Generated by <a href="http://getpelican.com" target="_blank">Pelican</a> with the <a href="http://github.com/nairobilug/pelican-alchemy">alchemy</a> theme.
+    </div>
+  </div>
+</footer> <!-- /.footer -->
+  <script src="./theme/js/jquery.min.js"></script>
+  <script src="./theme/js/bootstrap.min.js"></script>
+</body> <!-- 42 -->
+
+</html>
